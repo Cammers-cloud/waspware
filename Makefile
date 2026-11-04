@@ -2,7 +2,7 @@ CROSS    := x86_64-linux-gnu-
 CC       := $(CROSS)gcc
 LD       := $(CROSS)ld
 
-CFLAGS   := -Wall -Wextra -ffreestanding -O2 -nostdlib -mno-red-zone \
+CFLAGS = -Wall -Wextra -ffreestanding -O3 -march=native -mno-red-zone \
             -fno-exceptions -fno-stack-protector -fno-pic -fno-pie \
             -m64 -mcmodel=kernel -I.
 LDFLAGS  := -nostdlib -z max-page-size=0x1000 -T linker.ld
